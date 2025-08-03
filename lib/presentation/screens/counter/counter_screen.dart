@@ -13,26 +13,29 @@ class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Counter Screen')),
+      appBar: AppBar(title: const Text('Counter Screen')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               '$clickCounter',
-              style: TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
+              style: const TextStyle(
+                fontSize: 160,
+                fontWeight: FontWeight.w100,
+              ),
             ),
 
             Text(
               'Click${clickCounter == 1 ? '' : 's'}',
-              style: TextStyle(fontSize: 25),
+              style: const TextStyle(fontSize: 25),
             ),
 
             // if (clickCounter == 1)
-            //   Text('Click', style: TextStyle(fontSize: 25)),
+            //   const Text('Click', style: TextStyle(fontSize: 25)),
 
             // if (clickCounter != 1)
-            //   Text('Clicks', style: TextStyle(fontSize: 25)),
+            //   const Text('Clicks', style: TextStyle(fontSize: 25)),
           ],
         ),
       ),
@@ -41,7 +44,7 @@ class _CounterScreenState extends State<CounterScreen> {
           clickCounter++;
           setState(() {});
         },
-        child: Icon(Icons.plus_one),
+        child: const Icon(Icons.plus_one),
       ),
     );
   }

@@ -14,7 +14,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter Functions'),
+        title: const Text('Counter Functions'),
         actions: [
           IconButton(
             onPressed: () {
@@ -22,7 +22,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
                 clickCounter = 0;
               });
             },
-            icon: Icon(Icons.refresh_rounded),
+            icon: const Icon(Icons.refresh_rounded),
           ),
         ],
       ),
@@ -33,12 +33,15 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
           children: [
             Text(
               '$clickCounter',
-              style: TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
+              style: const TextStyle(
+                fontSize: 160,
+                fontWeight: FontWeight.w100,
+              ),
             ),
 
             Text(
               'Click${clickCounter == 1 ? '' : 's'}',
-              style: TextStyle(fontSize: 25),
+              style: const TextStyle(fontSize: 25),
             ),
 
             // if (clickCounter == 1)
@@ -60,7 +63,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
             },
           ),
 
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
 
           CustomButton(
             icon: Icons.exposure_minus_1_outlined,
@@ -71,7 +74,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
             },
           ),
 
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
 
           CustomButton(
             icon: Icons.plus_one,

@@ -3,7 +3,7 @@ import 'package:hello_world_app/presentation/screens/counter/counter_functions_s
 // import 'package:hello_world_app/presentation/screens/counter/counter_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorSchemeSeed: Colors.blue),
-      home: CounterFunctionsScreen(),
+      home: const CounterFunctionsScreen(),
     );
   }
 }
